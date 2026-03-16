@@ -1,0 +1,364 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --background: #ffffff;
+  --foreground: oklch(0.145 0 0);
+  --card: #ffffff;
+  --card-foreground: oklch(0.145 0 0);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.145 0 0);
+  --primary: #030213;
+  --primary-foreground: oklch(1 0 0);
+  --secondary: oklch(0.95 0.0058 264.53);
+  --secondary-foreground: #030213;
+  --muted: #ececf0;
+  --muted-foreground: #717182;
+  --accent: #e9ebef;
+  --accent-foreground: #030213;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 0, 0, 0.1);
+  --input: transparent;
+  --input-background: #f3f3f5;
+  --switch-background: #cbced4;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: #030213;
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+/* Pastel Theme */
+:root[data-theme="pastel"] {
+  --background: #fdfcfe;
+  --foreground: #2d2838;
+  --card: #ffffff;
+  --card-foreground: #2d2838;
+  --primary: #7c3aed;
+  --primary-foreground: #fdfcfe;
+  --secondary: #f3e8ff;
+  --secondary-foreground: #5b21b6;
+  --muted: #fae8ff;
+  --muted-foreground: #9333ea;
+  --accent: #e9d5ff;
+  --accent-foreground: #6b21a8;
+  --border: rgba(139, 92, 246, 0.15);
+  --input-background: #faf5ff;
+}
+
+/* Ocean Theme */
+:root[data-theme="ocean"] {
+  --background: #f8fcfe;
+  --foreground: #1e3a4f;
+  --card: #ffffff;
+  --card-foreground: #1e3a4f;
+  --primary: #0891b2;
+  --primary-foreground: #f8fcfe;
+  --secondary: #e0f2fe;
+  --secondary-foreground: #0369a1;
+  --muted: #cffafe;
+  --muted-foreground: #0e7490;
+  --accent: #a5f3fc;
+  --accent-foreground: #155e75;
+  --border: rgba(6, 182, 212, 0.15);
+  --input-background: #f0f9ff;
+}
+
+/* Warm Theme */
+:root[data-theme="warm"] {
+  --background: #fffbf5;
+  --foreground: #4a2c1f;
+  --card: #ffffff;
+  --card-foreground: #4a2c1f;
+  --primary: #ea580c;
+  --primary-foreground: #fffbf5;
+  --secondary: #fed7aa;
+  --secondary-foreground: #c2410c;
+  --muted: #ffedd5;
+  --muted-foreground: #ea580c;
+  --accent: #fef3c7;
+  --accent-foreground: #d97706;
+  --border: rgba(251, 146, 60, 0.15);
+  --input-background: #fef9f3;
+}
+
+/* Vibrant Theme */
+:root[data-theme="vibrant"] {
+  --background: #fef5fe;
+  --foreground: #3b1c41;
+  --card: #ffffff;
+  --card-foreground: #3b1c41;
+  --primary: #c026d3;
+  --primary-foreground: #fef5fe;
+  --secondary: #fae8ff;
+  --secondary-foreground: #a21caf;
+  --muted: #f5d0fe;
+  --muted-foreground: #c026d3;
+  --accent: #e9d5ff;
+  --accent-foreground: #7e22ce;
+  --border: rgba(192, 38, 211, 0.15);
+  --input-background: #fdf4ff;
+}
+
+/* Dark Mode Theme Variations */
+.dark[data-theme="pastel"] {
+  --background: #1a1625;
+  --foreground: #f3e8ff;
+  --card: #221932;
+  --card-foreground: #f3e8ff;
+  --primary: #a78bfa;
+  --primary-foreground: #1a1625;
+  --secondary: #3b2f4d;
+  --secondary-foreground: #e9d5ff;
+  --muted: #312644;
+  --muted-foreground: #c4b5fd;
+  --accent: #4c1d95;
+  --accent-foreground: #e9d5ff;
+  --border: rgba(167, 139, 250, 0.2);
+  --input-background: #2d2240;
+}
+
+.dark[data-theme="ocean"] {
+  --background: #0a1929;
+  --foreground: #e0f2fe;
+  --card: #132f4c;
+  --card-foreground: #e0f2fe;
+  --primary: #22d3ee;
+  --primary-foreground: #0a1929;
+  --secondary: #1e3a5f;
+  --secondary-foreground: #bae6fd;
+  --muted: #1a2942;
+  --muted-foreground: #67e8f9;
+  --accent: #0c4a6e;
+  --accent-foreground: #bae6fd;
+  --border: rgba(34, 211, 238, 0.2);
+  --input-background: #172e45;
+}
+
+.dark[data-theme="warm"] {
+  --background: #1c1510;
+  --foreground: #fef3c7;
+  --card: #2a1f17;
+  --card-foreground: #fef3c7;
+  --primary: #fb923c;
+  --primary-foreground: #1c1510;
+  --secondary: #3d2817;
+  --secondary-foreground: #fed7aa;
+  --muted: #332419;
+  --muted-foreground: #fdba74;
+  --accent: #7c2d12;
+  --accent-foreground: #fed7aa;
+  --border: rgba(251, 146, 60, 0.2);
+  --input-background: #261c14;
+}
+
+.dark[data-theme="vibrant"] {
+  --background: #1e1124;
+  --foreground: #fae8ff;
+  --card: #2d1b35;
+  --card-foreground: #fae8ff;
+  --primary: #e879f9;
+  --primary-foreground: #1e1124;
+  --secondary: #4a1d5c;
+  --secondary-foreground: #f5d0fe;
+  --muted: #3d1f4a;
+  --muted-foreground: #f0abfc;
+  --accent: #701a75;
+  --accent-foreground: #f5d0fe;
+  --border: rgba(232, 121, 249, 0.2);
+  --input-background: #2a1933;
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --input-background: oklch(0.2 0 0);
+  --switch-background: oklch(0.35 0 0);
+  --ring: oklch(0.439 0 0);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /**
+  * Default typography styles for HTML elements (h1-h4, p, label, button, input).
+  * These are in @layer base, so Tailwind utility classes (like text-sm, text-lg) automatically override them.
+  */
+
+  html {
+    font-size: var(--font-size);
+  }
+
+  h1 {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-size: var(--text-xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h3 {
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h4 {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  label {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  button {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  input {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
+}
+/* ── Wallpaper support ───────────────────────────────────── */
+
+/* Wallpaper applied directly to html element via JS inline style */
+html[data-wallpaper="active"] {
+  background-size: cover !important;
+  background-position: center !important;
+  background-attachment: fixed !important;
+  background-repeat: no-repeat !important;
+}
+
+html[data-wallpaper="active"] body {
+  background: transparent !important;
+}
+
+/* Frosted glass — override Tailwind bg-card with !important */
+html[data-wallpaper="active"] .bg-card {
+  background-color: color-mix(in srgb, var(--card) 80%, transparent) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+}
+
+html[data-wallpaper="active"] .bg-background {
+  background-color: transparent !important;
+}
+
+html[data-wallpaper="active"] header {
+  background-color: color-mix(in srgb, var(--card) 75%, transparent) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+}
+
+html[data-wallpaper="active"] footer {
+  background-color: color-mix(in srgb, var(--card) 80%, transparent) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+}
+
+html[data-wallpaper="active"] .bg-input-background {
+  background-color: color-mix(in srgb, var(--input-background) 85%, transparent) !important;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Second Bridge</title>
+    <link rel="icon" id="favicon" type="image/png" href="/Second-Bridge/logo-light.png" />
+    <meta name="description" content="A directory of community services and resources. Browse, take notes, and connect — at your own pace, on your own terms." />
+    <script>
+      // Swap favicon based on system color scheme immediately (before React loads)
+      (function() {
+        var favicon = document.getElementById('favicon');
+        var base = '/Second-Bridge';
+        function update() {
+          var stored = localStorage.getItem('theme-mode');
+          var dark = stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          favicon.href = dark ? base + '/logo-dark.png' : base + '/logo-light.png';
+        }
+        update();
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', update);
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
